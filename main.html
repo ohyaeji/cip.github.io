@@ -24,7 +24,7 @@
     .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
     .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
     .info .link {color: #5085BB;}
-    .info .bound {position: absolute; top: 20px;right: 10px; color: #888;width: 17px;height: 17px;background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM2eTF-mGRefaB6eSNZqU4HpwKPX-ZaopdgQ&usqp=CAU');}
+    .info .bound {position: absolute; top: 20px;right: 10px; color: #888;width: 17px;height: 17px;}
 </style>
 </head>
 <body>
@@ -65,7 +65,7 @@ var content = '<div class="wrap">' +
             '                <div><a href="https://www.gachon.ac.kr/kor/index.do" target="_blank" class="link">홈페이지</a></div>' + 
             '            </div>' + 
             '            <div>' +
-            '               <div class="bound" onclick="setBounds()" title="범위 재설정"></div>' +
+            '               <div class="bound" onclick="setBounds()" title="범위 재설정" url=""><ion-icon name="locate-sharp"></ion-icon></div>' +
             '            </div>' +
             '        </div>' + 
             '    </div>' +    
