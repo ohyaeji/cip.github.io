@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>닫기가 가능한 커스텀 오버레이</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIP_main</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- stylesheet -->
+
     <style>
     .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
     .wrap * {padding: 0;margin: 0;}
@@ -18,6 +24,7 @@
     .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
     .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
     .info .link {color: #5085BB;}
+    .info .bound {position: absolute; top: 20px;right: 10px; color: #888;width: 17px;height: 17px;background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM2eTF-mGRefaB6eSNZqU4HpwKPX-ZaopdgQ&usqp=CAU');}
 </style>
 </head>
 <body>
@@ -57,6 +64,9 @@ var content = '<div class="wrap">' +
             '                <div class="jibun ellipsis"> 031-750-5114</div>' + 
             '                <div><a href="https://www.gachon.ac.kr/kor/index.do" target="_blank" class="link">홈페이지</a></div>' + 
             '            </div>' + 
+            '            <div>' +
+            '               <div class="bound" onclick="setBounds()" title="범위 재설정"></div>' +
+            '            </div>' +
             '        </div>' + 
             '    </div>' +    
             '</div>';
@@ -77,6 +87,30 @@ kakao.maps.event.addListener(marker, 'click', function() {
 // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
 function closeOverlay() {
     overlay.setMap(null);     
+}
+
+var points = [
+    new kakao.maps.LatLng(37.451299, 127.127220),
+    new kakao.maps.LatLng(37.450412, 127.129920),
+    new kakao.maps.LatLng(37.455101, 127.134374)
+];
+
+var bounds = new kakao.maps.LatLngBounds();
+
+var i, marker2;
+for (i = 0; i < points.length; i++) {
+    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+    marker2 =     new kakao.maps.Marker({ position : points[i] });
+    marker2.setMap(map);
+    
+    // LatLngBounds 객체에 좌표를 추가합니다
+    bounds.extend(points[i]);
+}
+
+function setBounds() {
+    // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+    // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+    map.setBounds(bounds);
 }
 </script>
 </body>
