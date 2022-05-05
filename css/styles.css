@@ -129,7 +129,7 @@ a {
 }
 
 .body-map {
-    justify-self: flex-end;
+    flex: 1;
 }
 
 /* Active links menu */
@@ -189,4 +189,13 @@ a {
 .info .link {color: #5085BB;}
 .info .bound {position: absolute; top: 20px;right: 10px; color: #888;width: 17px;height: 17px;}
 
-  
+.overlay {
+    display: block;
+    background-color: #087f5b;
+    color: #fff;
+    text-align: center;
+    height: 24px;
+    line-height: 22px;
+    border-radius: 4;
+    padding: 0px 10px;
+}
