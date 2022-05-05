@@ -208,6 +208,7 @@ a {
 }
 
 .info {
+    display: none;
     width: 100%;
     height: 5vh;
     position: fixed;
