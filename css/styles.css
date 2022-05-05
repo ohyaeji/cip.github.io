@@ -200,12 +200,12 @@ a {
 
 .info__toggle {
     font-size: 30px;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background-color: #087f5b;
     cursor: pointer;
     color: #fff;
-    align-items: center;
+
 }
 
 .info {
