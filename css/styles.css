@@ -198,4 +198,21 @@ a {
     padding-left: 3px;
 }
 
+.info__toggle {
+    font-size: 10px;
+    background-color: #087f5b;
+    cursor: pointer;
+    color: #fff;
+}
 
+.info {
+    display: none;
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    bottom: 0;
+}
+
+.expander2 {
+    display: block;
+}
