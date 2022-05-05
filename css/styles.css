@@ -176,3 +176,26 @@ a {
     border-radius: 10;
     padding: 0px 10px;
 }
+
+.Search {
+    width: 100%;
+    height: 46px;
+    border-radius: 3px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    outline: black;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+
