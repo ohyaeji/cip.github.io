@@ -212,6 +212,7 @@ a {
     height: 20vh;
     position: fixed;
     bottom: 0;
+    font-size: 10px;
 }
 
 .expander2 {
