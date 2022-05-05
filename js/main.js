@@ -7,7 +7,8 @@ const showMenu = (toggleId, navbarId, bodyId) => {
     if( toggle && navbar ) {
         toggle.addEventListener('click', ()=>{
             navbar.classList.toggle('expander');
-            bodypadding.classList.toggle('body-pd');
+
+            bodypadding.classList.toggle('body-pd')
         })
     }
 }
@@ -35,16 +36,3 @@ for(i=0;i<linkCollapse.length;i++) {
         rotate.classList.toggle('rotate')
     });
 }
-
-var infoTitle = document.querySelectorAll('.overlay');
-infoTitle.forEach(function(e) {
-    var w = e.offsetWidth + 10;
-    var ml = w/2;
-    e.parentElement.style.top = "82px";
-    e.parentElement.style.left = "50%";
-    e.parentElement.style.marginLeft = -ml+"px";
-    e.parentElement.style.width = w+"px";
-    e.parentElement.previousSibling.style.display = "none";
-    e.parentElement.parentElement.style.border = "0px";
-    e.parentElement.parentElement.style.background = "unset";
-});
