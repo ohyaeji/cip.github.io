@@ -207,9 +207,9 @@ a {
     color: #fff;
 }
 
-/* .info {
+.info {
     width: 100%;
-    height: 20vh;
+    height: 5vh;
     position: fixed;
     bottom: 0;
     font-size: 10px;
@@ -217,4 +217,4 @@ a {
 
 .expander2 {
     display: block;
-} */
+}
