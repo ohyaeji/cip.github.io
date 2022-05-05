@@ -171,13 +171,8 @@ a {
     transition: .5s;
 }
 
-.marker {
-    position: relative;
-}
 
 .overlay {
-    position: absolute;
-    top: 12px;
     display: block;
     background-color: #087f5b;
     color: #fff;
