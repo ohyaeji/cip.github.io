@@ -183,7 +183,7 @@ a {
     border-radius: 3px;
     background-color: #fff;
     display: grid;
-    grid-template-columns: 8fr 2fr;
+    grid-template-columns: 1fr 7fr 2fr;
     align-items: center;
     column-gap: .75rem;
     padding: .75rem;
@@ -219,4 +219,8 @@ a {
 
 .expander2 {
     display: contents;
+}
+
+img {
+    object-fit: cover;
 }
