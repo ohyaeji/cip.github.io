@@ -179,7 +179,7 @@ a {
 
 .Search {
     width: 100%;
-    height: 40px;
+    height: auto;
     border-radius: 3px;
     background-color: #fff;
     display: grid;
