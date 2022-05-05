@@ -15,7 +15,7 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <!-- <ion-icon name="image-sharp"></ion-icon> -->
+                    <!-- <ion-icon  name="image-sharp"></ion-icon> -->
                     <a href="#" class="nav__logo">CIP</a>
                 </div>
                 <div class="nav__list">
@@ -80,7 +80,8 @@
     // 지도에 마커를 표시합니다 
     var marker = new kakao.maps.Marker({
         map: map, 
-        position: new kakao.maps.LatLng(37.451076, 127.128628)
+        position: new kakao.maps.LatLng(37.451076, 127.128628),
+        content: '<div class="marker"></div>'
     });
 
     // 커스텀 오버레이에 표시할 컨텐츠 입니다
