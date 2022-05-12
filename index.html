@@ -323,6 +323,20 @@
 
                 // 커스텀 오버레이를 지도에 표시합니다
                 customOverlay.setMap(map);
+
+                var overlay = new kakao.maps.CustomOverlay({
+                    content : content2,
+                    map: map,
+                    position: positions[1].latlng
+                });
+
+                kakao.maps.event.addListener(customOverlay, 'click', function(){
+                    overlay.setMap(map);
+                })
+                function closeOverlay() {
+                    overlay.setMap(null);
+                }
+
             }
 
             var content2 = '<div class="wrap">' + 
@@ -344,14 +358,7 @@
             '    </div>' +    
             '</div>';
 
-            var infowindow = new kakao.maps.InfoWindow({
-                map: map,
-                position: positions[1],
-                content: content2,
-                removable : true
-
-            });
-
+            
         </script>
     </div>
 
