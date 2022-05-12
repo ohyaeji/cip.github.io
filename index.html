@@ -78,27 +78,31 @@
                 }
             ];
 
-            var content = '<div class ="label"><span class="center">3</span></div>';
+            var icon = new kakao.maps.MarkerImage(
+                'https://cdn2.iconfinder.com/data/icons/flat-icons-web/40/Chat_Alt-1024.png',
+                new kakao.maps.Size(100, 80),
+                {
+                    // offset: new kakao.maps.Point(),
+                    alt: "마커 이미지 예제",
+                    shape: "poly",
+                    coords: "1,20,1,9,5,2,10,0,21,0,27,3,30,9,30,20,17,33,14,33"
+                }
+            );
+
+            var content = '<div class ="label"><span class="left"></span><span class="center">3</span><span class="right"></span></div>';
                 
             for ( var i =0; i<positions.length; i++){
-                var marker = new kakao.maps.Marker({
-                    map:map,
+                var customOverlay = new kakao.maps.CustomOverlay({
                     position: positions[i].latlng,
-                    title : positions[i].title,
-                    content: content
+                    content: content   
                 });
+
+                // 커스텀 오버레이를 지도에 표시합니다
+                customOverlay.setMap(map);
             }
-            
         </script>
     </div>
 
-    
-
-
-    
-    
-    </style>
-    </head>
 
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
