@@ -102,7 +102,9 @@
             for ( var i =0; i<positions.length; i++){
                 var customOverlay = new kakao.maps.CustomOverlay({
                     position: positions[i].latlng,
-                    content: content   
+                    content: content,
+                    xAnchor: 0.5,
+   					yAnchor: 1.8
                 });
 
                 // 커스텀 오버레이를 지도에 표시합니다
