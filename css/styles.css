@@ -226,10 +226,40 @@ img {
     object-fit: scale-down;
 }
 
-.marker {
-  display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;
+.bubble
+{
+position: relative;
+width: 50px;
+height: 35px;
+padding: 0px;
+background: #099268;
+-webkit-border-radius: 11px;
+-moz-border-radius: 11px;
+border-radius: 11px;
+display: inline-block;
 }
 
-.label {margin-bottom: 96px;}
-.label * {display: inline-block;vertical-align: top;}
-.label .center {background: url('https://www.iconfinder.com/icons/342975/bubble_chat_speech_icon') repeat-x;display: inline-block;height: 24px;font-size: 12px;line-height: 24px;}
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 13px 8px 0;
+border-color: #099268 transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -13px;
+left: 27px;
+}
+
+.content 
+{
+position: absolute;
+left: 50%;
+top: 50%;
+ transform: translate(-50%,-50%) 
+}
+
+
+
