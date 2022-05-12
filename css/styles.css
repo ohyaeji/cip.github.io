@@ -225,3 +225,7 @@ img {
     height: 70px;
     object-fit: scale-down;
 }
+
+.label {margin-bottom: 96px;}
+.label * {display: inline-block;vertical-align: top;}
+.label .center {background: url('https://cdn2.iconfinder.com/data/icons/flat-icons-web/40/Chat_Alt-1024.png') repeat-x;display: inline-block;height: 24px;font-size: 12px;line-height: 24px;}
