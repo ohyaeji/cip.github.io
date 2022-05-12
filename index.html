@@ -18,20 +18,39 @@
                     <a href="#" class="nav__logo">CIP</a>
                 </div>
                 <div class="nav__list">
+                    <!-- 홈화면 -->
                     <a href="#" class="nav__link active" onclick="location.href=index.html">
                         <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Home</span>
                     </a>
-
-                    <div href="#" class="nav__link collapse">
+                    <!-- 마이페이지 (로그인 안되어 있으면 로그인 페이지로) -->
+                    <div href="#" class="nav__link collapse" onclick="location.href=mypage.html">
                         <ion-icon name="person-circle-outline"></ion-icon>
                         <span class="nav_name">My Page</span>
                     </div>
 
-                    <a href="#" class="nav__link">
+                    <!-- 설정페이지 -->
+                    <a href="#" class="nav__link" onclick="location.href=settings.html">
                         <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Settings</span>
                     </a>
+
+                    <!-- 공지사항 -->
+                    <a href="#" class="nav__link" onclick="location.href=settings.html">
+                        <span class="nav_name">Announcement</span>
+                    </a>
+
+                    <!-- 이용안내 -->
+                    <a href="#" class="nav__link" onclick="location.href=settings.html">
+                        <span class="nav_name">How to use</span>
+                    </a>
+
+                    <!-- 문의하기 -->
+                    <a href="#" class="nav__link" onclick="location.href=settings.html">
+                        <ion-icon name="help-outline"></ion-icon>
+                        <span class="nav_name">Q&A</span>
+                    </a>
+
                 </div>
                 <a href="#" class="nav__link">
                     <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
