@@ -312,7 +312,7 @@
             
             // 지도에 마커를 표시합니다
             // 공석 개수를 나타내고 있는 마커는 계속 표시가 되고 있다
-            var positions = [
+            var marker_positions = [
                 {
                     title: '가천관', 
                     latlng: new kakao.maps.LatLng( 37.45031789535715, 127.12989916567284)
@@ -336,7 +336,7 @@
                 
             for ( var i =0; i<positions.length; i++){
                 var customOverlay = new kakao.maps.CustomOverlay({
-                    position: positions[i].latlng,
+                    position: marker_positions[i].latlng,
                     content: content,
                     xAnchor: 0.5,
    					yAnchor: 1.8
