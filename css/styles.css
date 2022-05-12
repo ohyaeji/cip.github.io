@@ -67,8 +67,6 @@ a {
 
 /* l NAV */
 .l-navbar {
-    top: 0;
-    left: 0;
     width: 390px;
     height: 855px;
     background-color: var(--bg-color);
