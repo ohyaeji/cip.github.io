@@ -15,19 +15,19 @@ const showMenu = (toggleId, navbarId, bodyId) => {
 
 showMenu('nav-toggle', 'navbar', 'body-pd')
 
-// Expander info
-const showInfo = (toggleId, infoId) => {
-    const toggle = document.getElementById(toggleId),
-    infoId = document.getElementById(infoId)
+// // Expander info
+// const showInfo = (toggleId, infoId) => {
+//     const toggle = document.getElementById(toggleId),
+//     infoId = document.getElementById(infoId)
 
-    if ( toggle && infoId ) {
-        toggle.addEventListener('click', () => {
-            infoId.classList.toggle('expander2');
-        })
-    }
-}
+//     if ( toggle && infoId ) {
+//         toggle.addEventListener('click', () => {
+//             infoId.classList.toggle('expander2');
+//         })
+//     }
+// }
 
-showInfo('info-toggle', 'info')
+// showInfo('info-toggle', 'info')
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
