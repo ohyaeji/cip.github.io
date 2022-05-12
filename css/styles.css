@@ -165,18 +165,6 @@ a {
     transition: .5s;
 }
 
-
-.overlay {
-    display: block;
-    background-color: #087f5b;
-    color: #fff;
-    text-align: center;
-    height: 24px;
-    line-height: 22px;
-    border-radius: 10;
-    padding: 0px 10px;
-}
-
 .Search {
     width: 100%;
     height: auto;
