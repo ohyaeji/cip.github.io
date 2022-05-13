@@ -343,7 +343,8 @@
                     var overlay = new kakao.maps.CustomOverlay({
                         content : content2,
                         map: map,
-                        position: customOverlay.getPosition()
+                        position: customOverlay.getPosition(),
+                        yAnchor: 2.0
                     });
 
                     kakao.maps.event.addListener(customOverlay, 'click', function(){
