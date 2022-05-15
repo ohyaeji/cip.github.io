@@ -75,7 +75,7 @@ a {
     transition: .5s;
     z-index: var(--z-fixed);
     float: left;
-    position: relative;
+    position: fixed;
     
 }
 
@@ -134,7 +134,7 @@ a {
 
 /* Expander menu */
 .expander {
-    width: calc(var(--nav--width) + 13rem);
+    width: calc(var(--nav--width) + 15rem);
 }
 
 
