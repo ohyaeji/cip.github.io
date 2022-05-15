@@ -76,7 +76,7 @@ a {
     z-index: var(--z-fixed);
     float: left;
     position: fixed;
-    
+    flex: 1;   
 }
 
 /* NAV */
@@ -200,6 +200,8 @@ a {
     padding-left: 3px;
 }
 
+
+
 .info__toggle {
     font-size: 30px;
     width: 100%;
@@ -299,16 +301,7 @@ top: 50%;
 #pagination .on {font-weight: bold; cursor: default;color:#777;}
 
 
-.map {
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 390px;
-    right: 0;
-    z-index: 0;
-    display: flex;
-}
+
 
 .container {
     flex-direction: row;
@@ -365,4 +358,9 @@ top: 50%;
     padding: 10px 0 0 0;
     background-color: #fff;
     height: fit-content;
+}
+
+.table_content {
+    display: flex;
+    flex-direction: row;
 }
