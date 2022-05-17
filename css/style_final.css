@@ -16,3 +16,38 @@
 .menu {
     z-index: 3;
 }
+
+.bubble
+{
+position: relative;
+width: 50px;
+height: 35px;
+padding: 0px;
+background: #099268;
+-webkit-border-radius: 11px;
+-moz-border-radius: 11px;
+border-radius: 11px;
+display: inline-block;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 13px 8px 0;
+border-color: #099268 transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -13px;
+left: 27px;
+}
+
+.content 
+{
+position: absolute;
+left: 50%;
+top: 50%;
+ transform: translate(-50%,-50%) 
+}
