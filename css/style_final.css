@@ -1,0 +1,14 @@
+.wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
