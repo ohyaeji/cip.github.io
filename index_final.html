@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style_final.css">
+
+    <title>CIP</title>
+</head>
+
+<body>
+    
+    <div class="wrap"></div>
+        <div class="menu" id="menu">
+
+        </div>
+
+        <div class="map" id="map">
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3911680ceb2853064dd77af72246f542&libraries=services,clusterer,drawing"></script>
+        <script>
+
+            var mapContainer = document.getElementById('map'), // 지도의 중심좌표
+                mapOption = {
+                    center: new kakao.maps.LatLng(37.452053, 127.131652), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+    
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+            
+
+            // 지도에 마커를 표시합니다
+            // 공석 개수를 나타내고 있는 마커는 계속 표시가 되고 있다
+            var positions = [
+                {
+                    title: '가천관', 
+                    latlng: new kakao.maps.LatLng( 37.45031789535715, 127.12989916567284)
+                },
+                {
+                    title: 'AI공학관', 
+                    latlng: new kakao.maps.LatLng(37.455250918839575, 127.13395388911493)
+                },
+                {
+                    title: 'IT융합관', 
+                    latlng: new kakao.maps.LatLng(37.450996628275185, 127.12716535863501)
+                }
+            ];
+
+            var content = '<div class="bubble"><span class="content">3</span></div>';
+                
+            for ( var i =0; i<positions.length; i++){
+                var customOverlay = new kakao.maps.CustomOverlay({
+                    position: positions[i].latlng,
+                    content: content,
+                    xAnchor: 0.5,
+   					yAnchor: 1.8
+                });
+
+                // 커스텀 오버레이를 지도에 표시합니다
+                customOverlay.setMap(map);
+            }
+        </script>
+        </div>
+
+    </div>
+
+    <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- JS -->
+    <!-- <script src="js/main.js"></script> -->
+
+</body>
+
+</html>
