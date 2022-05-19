@@ -332,6 +332,8 @@ a {
     bottom: 0;
     width: 100%;
     height: 50%;
+    overflow: scroll;
+    visibility: hidden;
 }
 
 .d-infobar {
@@ -356,6 +358,8 @@ a {
 .info_content {
     border-bottom: 1px solid gray;
     display: inline;
+    height: 50%;
+    overflow: scroll;
 }
 
 /* @charset "UTF-8"; */
