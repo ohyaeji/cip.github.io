@@ -1,4 +1,4 @@
-// /* EXPANDER MENU */
+/* EXPANDER MENU */
 const showMenu = (toggleId, navbarId, bodyId) => {
     const toggle = document.getElementById(toggleId),
     navbar = document.getElementById(navbarId),
@@ -13,19 +13,21 @@ const showMenu = (toggleId, navbarId, bodyId) => {
 
 showMenu('nav-toggle', 'navbar', 'body-pd')
 
+
 // // Expander info
-// const showInfo = (toggleId, infoId) => {
+// const showInfo = (toggleId, navbarId, infoId) => {
 //     const toggle = document.getElementById(toggleId),
+//     navbar = document.getElementById(navbarId),
 //     infoId = document.getElementById(infoId)
 
-//     if ( toggle && infoId ) {
+//     if ( toggle && navbar ) {
 //         toggle.addEventListener('click', () => {
-//             infoId.classList.toggle('expander2');
+//             navbar.classList.toggle('expander2');
 //         })
 //     }
 // }
 
-// showInfo('info-toggle', 'info')
+// showInfo('info-toggle', 'infobar', 'info')
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
@@ -64,3 +66,11 @@ $(function(){
       $("#popup").fadeOut();
     }
   });
+
+  /*!
+* Start Bootstrap - Blog Post v5.0.8 (https://startbootstrap.com/template/blog-post)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-post/blob/master/LICENSE)
+*/
+// This file is intentionally blank
+// Use this file to add JavaScript to your project
