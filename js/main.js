@@ -18,9 +18,12 @@ const showInfo = (bubbleId, infoId, toggleId) => {
           info = document.getElementById(infoId),
           toggle = document.getElementById(toggleId)
     
-    bubble.style.visibility = 'visible';
-    toggle.style.visibility = 'hidden';
+    toggle.addEventListener('click', () => {
+        info.style.visibility = 'hidden'
+    })
 }
+
+showInfo('bubble', 'info', 'info-toggle')
 
 // // Expander info
 // const showInfo = (toggleId, navbarId, infoId) => {
