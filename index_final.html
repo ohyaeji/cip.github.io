@@ -14,9 +14,9 @@
         <div class="menu" id="menu">
             <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
             <div class="search_box">
-                <input type="text" maxlength="225">
+                <input type="button" class="search_btn" maxlength="225" id="modal-open"  placeholder="장소를 검색하세요.">
                 <i id="keyboard"></i>
-                <ion-icon name="search-outline"></ion-icon>
+          
             </div>
         </div>
 
@@ -122,7 +122,37 @@
                 customOverlay.setMap(map);
             }
         </script>
+
+        <!-- 컨테이너 -->
+        <div class="container">
+            <!-- 모달을 감쌀 박스 -->
+            <div class="popup-wrap" id="popup"> 
+                <!-- 실질적 모달팝업 -->
+                <div class="popup">	
+                    <!-- 로고 영역 -->
+                    <div class="popup-head">	
+                        <span class="head-title">BYTHEM</span>
+                    </div>
+                    <!-- 컨텐츠 영역 -->
+                    <div class="popup-body">	
+                        <div class="body-content">
+                            <div class="body-titlebox">
+                            <h1>Confirm Modal</h1>
+                            </div>
+                            <div class="body-contentbox">
+                            <p> 모달 내용칸 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 푸터 버튼 영역 -->
+                    <div class="popup-foot"> 
+                    <span class="pop-btn confirm" id="confirm">확인</span>
+                    <span class="pop-btn close" id="close">창 닫기</span>
+                </div>
+            </div>
+            </div>
         </div>
+        
 
     </div>
 
