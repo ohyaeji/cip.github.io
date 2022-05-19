@@ -13,9 +13,8 @@ const showMenu = (toggleId, navbarId, bodyId) => {
 
 showMenu('nav-toggle', 'navbar', 'body-pd')
 
-const showInfo = (bubbleId, infoId, toggleId) => {
-    const bubble = document.getElementById(bubbleId),
-          info = document.getElementById(infoId),
+const closeInfo = (infoId, toggleId) => {
+    const info = document.getElementById(infoId),
           toggle = document.getElementById(toggleId)
     
     toggle.addEventListener('click', () => {
@@ -23,7 +22,12 @@ const showInfo = (bubbleId, infoId, toggleId) => {
     })
 }
 
-showInfo('bubble', 'info', 'info-toggle')
+closeInfo('info', 'info-toggle')
+
+const showInfo = (infoId) => {
+    const info = document.getElementById(infoId)
+    info.style.visibility = 'visible'
+}
 
 // // Expander info
 // const showInfo = (toggleId, navbarId, infoId) => {
