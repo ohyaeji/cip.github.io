@@ -334,6 +334,7 @@ a {
     height: 50%;
     overflow: scroll;
     visibility: hidden;
+    z-index: 4;
 }
 
 .d-infobar {
