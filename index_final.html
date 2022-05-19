@@ -109,7 +109,7 @@
                 }
             ];
 
-            var content = '<div class="bubble"><span class="content">3</span></div>';
+            var content = '<div class="bubble" id="bubble"><span class="content">3</span></div>';
                 
             for ( var i =0; i<positions.length; i++){
                 var customOverlay = new kakao.maps.CustomOverlay({
@@ -121,6 +121,10 @@
 
                 // 커스텀 오버레이를 지도에 표시합니다
                 customOverlay.setMap(map);
+
+                kakao.maps.event.addListener(customOverlay, 'click', function() {
+                    document.getElementById(info).style.visibility = 'visible';
+                });
             }
         </script>
 
