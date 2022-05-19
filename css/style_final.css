@@ -166,6 +166,12 @@ a {
     cursor: pointer;
 }
 
+.nav__close {
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
 .nav__logo {
     color: var(--white-color);
     font-weight: 600;
