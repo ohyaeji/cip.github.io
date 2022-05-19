@@ -9,16 +9,72 @@
     <title>CIP</title>
 </head>
 
-<body>
-    
+<body id="body-pd">  
     <div class="wrap"></div>
         <div class="menu" id="menu">
-            <ion-icon name="menu-outline" class="nav_toggle" id="nav_toggle"></ion-icon>
+            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
             <div class="search_box">
                 <input type="text" maxlength="225">
                 <i id="keyboard"></i>
                 <ion-icon name="search-outline"></ion-icon>
             </div>
+        </div>
+
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand" onclick="location.href=index_final.html">
+                        <a href="#" class="nav__logo">CIP</a>
+                    </div>
+                    <div class="nav__list">
+                        <!-- 홈화면 -->
+                        <a href="#" class="nav__link active" onclick="location.reload();">
+                            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">Home</span>
+                        </a>
+                        <!-- 마이페이지 (로그인 안되어 있으면 로그인 페이지로) -->
+                        <div href="#" class="nav__link collapse" onclick="location.href=mypage.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <span class="nav_name">My Page</span>
+                        </div>
+    
+                        <!-- 설정페이지 -->
+                        <a href="#" class="nav__link" onclick="location.href=settings.html">
+                            <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">Settings</span>
+                        </a>
+    
+                        <!-- 커뮤니티 -->
+                        <a href="#" class="nav__link" onclick="location.href=settings.html">
+                            <ion-icon name="clipboard-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">Community</span>
+                        </a>
+    
+                        <!-- 공지사항 -->
+                        <a href="#" class="nav__link" onclick="location.href=settings.html">
+                            <ion-icon name="volume-high-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">Announcement</span>
+                        </a>
+    
+                        <!-- 이용안내 -->
+                        <a href="#" class="nav__link" onclick="location.href=settings.html">
+                            <ion-icon name="information-circle-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">How to use</span>
+                        </a>
+    
+                        <!-- 문의하기 -->
+                        <a href="#" class="nav__link" onclick="location.href=settings.html">
+                            <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+                            <span class="nav_name">Q&A</span>
+                        </a>
+    
+                    </div>
+                    <a href="#" class="nav__link">
+                        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Log out</span>
+                    </a>
+                </div>
+            </nav>
         </div>
 
         <div class="map" id="map">
