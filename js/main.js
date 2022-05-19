@@ -13,6 +13,14 @@ const showMenu = (toggleId, navbarId, bodyId) => {
 
 showMenu('nav-toggle', 'navbar', 'body-pd')
 
+const showInfo = (bubbleId, infoId, toggleId) => {
+    const bubble = document.getElementById(bubbleId),
+          info = document.getElementById(infoId),
+          toggle = document.getElementById(toggleId)
+    
+    bubble.style.visibility = 'visible';
+    toggle.style.visibility = 'hidden';
+}
 
 // // Expander info
 // const showInfo = (toggleId, navbarId, infoId) => {
