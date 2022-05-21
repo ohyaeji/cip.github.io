@@ -134,7 +134,9 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: var(--nav--width);
+    width: calc(var(--nav--width) +92px + 9.25rem);
+    padding: var(--nav--padding);
+    visibility: hidden;
     height: 100vh;
     background-color: var(--bg-color);
     color: var(--white-color);
