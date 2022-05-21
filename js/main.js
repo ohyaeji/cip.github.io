@@ -35,7 +35,6 @@ const showInfo = (infoId) => {
     info.style.visibility = 'visible'
 }
 
-
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
 function colorLink() {
