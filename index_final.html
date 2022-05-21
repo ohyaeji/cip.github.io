@@ -140,87 +140,8 @@
                 customOverlay2.setMap(map);
                 customOverlay3.setMap(map);
 
-                var info_content = '<div id="info">'+
-                                        '<div class="d-infobar" id="infobar">'+
-                                        '<div class="info_header">'+
-                                            '<ion-icon name="close-outline" class="info__toggle" id="info-toggle"></ion-icon>'+
-                                            '<h3 class="p_name">가천대학교 AI 공학관</h3>'+
-                                        '</div>'+
-                                        '<div class="info_wrap">'+
-                                            '<div class="info_content">'+
-                                                '<div>'+
-                                                    '<span>공석 개수</span>'+
-                                                    '<span class="count">3</span>'+
-                                                '</div>'+
-                                                '<div>'+
-                                                    '<ion-icon name="location-outline"></ion-icon>'+
-                                                    '<span class="p_address">경기 성남시 수정구 복정동 495</span>'+
-                                                '</div>'+
-                                                '<div>'+
-                                                    '<ion-icon name="call-outline"></ion-icon>'+
-                                                    '<span class="p_phone">031-750-5114</span>'+
-                                                '</div>'+
-                                            '</div>'+
-                                            '<div class="community">'+
-                                                '<section class="mb-5">'+
-                                                    '<div class="card bg-light">'+
-                                                        '<div class="card-body">'+
-                                                            'Comment form'+
-                                                            '<form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>'+
-                                                            '<div class="comment_wrap">'+
-                                                                '<!-- Comment with nested comments -->'+
-                                                                '<div class="d-flex mb-4">'+
-                                                                    '<!-- Parent comment -->'+
-                                                                    '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>'+
-                                                                    '<div class="ms-3">'+
-                                                                        '<div class="fw-bold">Commenter Name</div>'+
-                                                                        'If you are going to lead a space frontier, it has to be government; it will never be private enterprise. Because the space frontier is dangerous, and it is expensive, and it has unquantified risks.'+
-                                                                        '<!-- Child comment 1 -->'+
-                                                                        '<div class="d-flex mt-4">'+
-                                                                            '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>'+
-                                                                            '<div class="ms-3">'+
-                                                                                '<div class="fw-bold">Commenter Name</div>'+
-                                                                                'And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can not get investors.'+
-                                                                            '</div>'+
-                                                                        '</div>'+
-                                                                        '<!-- Child comment 2 -->'+
-                                                                        '<div class="d-flex mt-4">'+
-                                                                            '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>'+
-                                                                            '<div class="ms-3">+'
-                                                                                '<div class="fw-bold">Commenter Name</div>'+
-                                                                                'When you put money directly to a problem, it makes a good headline.'+
-                                                                            '</div>'+
-                                                                        '</div>'+
-                                                                        '<!-- Child comment 3-->'+
-                                                                        '<div class="d-flex mt-4">'+
-                                                                            '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>'+
-                                                                            '<div class="ms-3">'+
-                                                                                '<div class="fw-bold">Commenter Name</div>'+
-                                                                                'When you put money directly to a problem, it makes a good headline.'+
-                                                                            '</div>'+
-                                                                        '</div>'+
-                                                                    '</div>'+
-                                                                '</div>'+
-                                                                '<!-- Single comment -->'+
-                                                                '<div class="d-flex">'+
-                                                                    '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>'+
-                                                                    '<div class="ms-3">'+
-                                                                        '<div class="fw-bold">Commenter Name</div>'+
-                                                                        'When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.'+
-                                                                    '</div>'+
-                                                                '</div>'+
-                                                            '</div>'+
-                                                        '</div>'+
-                                                    '</div>'+
-                                                '</section>'+
-                                            '</div>'+
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'
-
-                (function(customOverlay3, ){
-
-                })
+                kakao.maps.addListener(customOverlay3, 'click', showInfo('info'));
+                
             </script>
 
             <!-- 컨테이너
