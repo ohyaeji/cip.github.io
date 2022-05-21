@@ -1,17 +1,38 @@
 /* EXPANDER MENU */
-const showMenu = (toggleId, navbarId, bodyId) => {
-    const toggle = document.getElementById(toggleId),
-    navbar = document.getElementById(navbarId),
-    bodypadding = document.getElementById(bodyId)
+// const showMenu = (toggleId, navbarId, bodyId) => {
+//     const toggle = document.getElementById(toggleId),
+//     navbar = document.getElementById(navbarId),
+//     bodypadding = document.getElementById(bodyId)
 
-    if( toggle && navbar ) {
-        toggle.addEventListener('click', ()=>{
-            navbar.classList.toggle('expander');
-        })
-    }
+//     if( toggle && navbar ) {
+//         toggle.addEventListener('click', ()=>{
+//             navbar.classList.toggle('expander');
+//         })
+//     }
+// }
+// showMenu('nav-toggle', 'navbar', 'body-pd')
+
+const showMenu = (navbarId, toggleId) => {
+    const navbar = document.getElementById(navbarId),
+          toggle = document.getElementById(toggleId)
+
+    toggle.addEventListener('click', ()=>{
+        navbar.style.visibility = 'visible'
+    })
 }
 
-showMenu('nav-toggle', 'navbar', 'body-pd')
+showMenu('navbar', 'nav-toggle')
+
+const closeMenu = (navbarId, toggleId) => {
+    const navbar = document.getElementById(navbarId),
+          toggle = document.getElementById(toggleId)
+
+    toggle.addEventListener('click', ()=>{
+        navbar.style.visibility = 'hidden'
+    })
+}
+
+closeMenu('navbar', 'nav-close')
 
 const closeInfo = (infoId, toggleId) => {
     const info = document.getElementById(infoId),
