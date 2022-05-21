@@ -335,6 +335,7 @@ a {
     overflow: scroll;
     visibility: visible;
     z-index: 4;
+    background-color: #fff;
 }
 
 .d-infobar {
