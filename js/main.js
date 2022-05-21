@@ -1,37 +1,23 @@
 /* EXPANDER MENU */
-// const showMenu = (toggleId, navbarId, bodyId) => {
-//     const toggle = document.getElementById(toggleId),
-//     navbar = document.getElementById(navbarId),
-//     bodypadding = document.getElementById(bodyId)
-
-//     if( toggle && navbar ) {
-//         toggle.addEventListener('click', ()=>{
-//             navbar.classList.toggle('expander');
-//         })
-//     }
-// }
-// showMenu('nav-toggle', 'navbar', 'body-pd')
-
 const showMenu = (navbarId, toggleId) => {
     const navbar = document.getElementById(navbarId),
           toggle = document.getElementById(toggleId)
-
-    toggle.addEventListener('click', ()=>{
-        navbar.style.visibility = 'visible'
-    })
+    if( toggle && navbar ) {
+        toggle.addEventListener('click', ()=>{
+            navbar.classList.toggle('expander');
+        })
+    }
 }
-
-showMenu('navbar', 'nav-toggle')
-
 const closeMenu = (navbarId, toggleId) => {
     const navbar = document.getElementById(navbarId),
           toggle = document.getElementById(toggleId)
-
-    toggle.addEventListener('click', ()=>{
-        navbar.style.visibility = 'hidden'
-    })
+    if( toggle && navbar ) {
+        toggle.addEventListener('click', ()=>{
+            navbar.classList.toggle('expander');
+        })
+    }
 }
-
+showMenu('navbar', 'nav-toggle')
 closeMenu('navbar', 'nav-close')
 
 const closeInfo = (infoId, toggleId) => {
@@ -42,7 +28,6 @@ const closeInfo = (infoId, toggleId) => {
         info.style.visibility = 'hidden'
     })
 }
-
 closeInfo('info', 'info-toggle')
 
 const showInfo = (infoId) => {
@@ -50,20 +35,6 @@ const showInfo = (infoId) => {
     info.style.visibility = 'visible'
 }
 
-// // Expander info
-// const showInfo = (toggleId, navbarId, infoId) => {
-//     const toggle = document.getElementById(toggleId),
-//     navbar = document.getElementById(navbarId),
-//     infoId = document.getElementById(infoId)
-
-//     if ( toggle && navbar ) {
-//         toggle.addEventListener('click', () => {
-//             navbar.classList.toggle('expander2');
-//         })
-//     }
-// }
-
-// showInfo('info-toggle', 'infobar', 'info')
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
