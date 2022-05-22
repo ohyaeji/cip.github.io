@@ -20,20 +20,11 @@ const closeMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 closeMenu('navbar', 'nav-close')
 
-const closeInfo = (infoId, toggleId) => {
-    const info = document.getElementById(infoId),
-          toggle = document.getElementById(toggleId)
-    
-    toggle.addEventListener('click', () => {
-        info.style.visibility = 'hidden'
+$(function () {
+    $("#info-toggle").click(function(){
+        $("#info").toggle();
     })
-}
-closeInfo('info', 'info-toggle')
-
-const showInfo = (infoId) => {
-    const info = document.getElementById(infoId)
-    info.style.visibility = 'visible'
-}
+})
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
