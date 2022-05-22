@@ -20,11 +20,17 @@ const closeMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 closeMenu('navbar', 'nav-close')
 
-$(function () {
+function showinfo(){
+    $("#bubble").click(function(){
+        $("#info").toggle();
+    })
+}
+
+function closeinfo(){
     $("#info-toggle").click(function(){
         $("#info").toggle();
     })
-})
+}
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
