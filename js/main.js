@@ -23,12 +23,14 @@ closeMenu('navbar', 'nav-close')
 function showinfo(){
     $("#bubble").click(function(){
         $("#info").toggle();
+        alert("마커입니다.");
     })
 }
 
 function closeinfo(){
     $("#info-toggle").click(function(){
         $("#info").toggle();
+        alert("버튼입니다");
     })
 }
 
