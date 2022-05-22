@@ -109,9 +109,8 @@
                     }
                 ];
 
-                var content = '<div class="bubble" id="bubble"><span class="content">3</span></div>';
-                    
-            
+                var content = '<div class="bubble" onclick="showinfo()" id="bubble"><span class="content">3</span></div>';
+                
                 var customOverlay1 = new kakao.maps.CustomOverlay({
                         position: positions[0].latlng,
                         content: content,
@@ -177,7 +176,7 @@
             <div id="info">
                 <div class="d-infobar" id="infobar">
                     <div class="info_header">
-                        <ion-icon name="close-outline" class="info__toggle" id="info-toggle"></ion-icon>
+                        <ion-icon name="close-outline" class="info__toggle" id="info-toggle" onclick="closeinfo()"></ion-icon>
                         <h3 class="p_name">가천대학교 AI 공학관</h3>
                     </div>
                     <div class="info_wrap">
