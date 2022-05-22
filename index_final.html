@@ -16,7 +16,6 @@
             <div class="search_box">
                 <input type="text" class="search_btn" maxlength="225" id="modal-open"  placeholder="장소를 검색하세요.">
                 <i id="keyboard"></i>
-          
             </div>
         </div>
 
@@ -136,18 +135,6 @@
                 customOverlay2.setMap(map);
                 customOverlay3.setMap(map);
 
-                kakao.maps.event.addListener(customOverlay3, 'click', function(){
-                    $("#info").toggle();
-                    alert("확인됐습니다!");
-                });
-                
-                function showinfo(){
-                    $("#bubble").click(function(){
-                        $("#info").toggle();
-                        alert("마커입니다.");
-                    })
-                }
-
             </script>
 
 
@@ -183,7 +170,7 @@
             <div id="info">
                 <div class="d-infobar" id="infobar">
                     <div class="info_header">
-                        <ion-icon name="close-outline" class="info__toggle" id="info-toggle" onclick="closeinfo()"></ion-icon>
+                        <ion-icon name="close-outline" class="info__toggle" id="infobtn" onclick="closeinfo()"></ion-icon>
                         <h3 class="p_name">가천대학교 AI 공학관</h3>
                     </div>
                     <div class="info_wrap">
@@ -279,6 +266,21 @@
 
     <!-- JS -->
     <script src="js/main.js"></script>
+    <script>
+        function showinfo(){
+            $("#bubble").click(function(){
+                $("#info").toggle();
+                alert("마커입니다.");
+            })
+        }
+
+        function closeinfo(){
+            $("#infobtn").click(function(){
+                $("#info").toggle();
+                alert("버튼입니다.");
+            })
+        }
+    </script>
 
 </body>
 
