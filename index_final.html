@@ -140,9 +140,12 @@
                 customOverlay2.setMap(map);
                 customOverlay3.setMap(map);
 
-                kakao.maps.addListener(customOverlay3, 'click', showInfo('info'));
+                kakao.maps.event.addListener(customOverlay3, 'click', function(){
+                    $("#info").toggle();
+                });
                 
             </script>
+
 
             <!-- 컨테이너
             <div class="container">
