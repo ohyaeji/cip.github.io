@@ -13,15 +13,15 @@ showMenu('navbar', 'nav-close')
 
 function showinfo(){
     const info = document.getElementById('info');
-    info.classList.toggle('display_visible');
+    info.classList.toggle('info_visible');
     info.classList.toggle('info');
 }
 
 function showpopup(){
-    const popup = document.getElementById('menu_wrap');
+    const popup = document.getElementById('popup');
     const menu = document.getElementById('menu');
-    popup.classList.toggle('menu-wrap-visible');
-    popup.classList.toggle('menu_wrap');
+    popup.classList.toggle('popup-wrap-visible');
+    popup.classList.toggle('popup-wrap');
     menu.classList.toggle('menu_display');
 
 }
