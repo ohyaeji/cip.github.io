@@ -49,26 +49,3 @@ for(i=0;i<linkCollapse.length;i++) {
     });
 }
 
-$(function(){
-    $("#confirm").click(function(){
-        modalClose();
-        //컨펌 이벤트 처리
-    });
-    $("#modal-open").click(function(){        
-        $("#popup").css('display','flex').hide().fadeIn();
-    });
-    $("#close").click(function(){
-        modalClose();
-    });
-    function modalClose(){
-      $("#popup").fadeOut();
-    }
-  });
-
-  /*!
-* Start Bootstrap - Blog Post v5.0.8 (https://startbootstrap.com/template/blog-post)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-post/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
