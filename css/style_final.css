@@ -11722,7 +11722,7 @@ background-color:rgba(0,0,0,.3);
     /* 이벤트가 발생할 때 띄우기 위해 숨김
     //처음부터 보이게 하는 상황이라면 display:flex; */
     padding:15px; 
-  	z-index: 3;
+  	z-index: 10;
     /* 반응형의 경우 padding이 없으면 박스가 화면에 붙어서 안이뻐짐 */}
 .menu-wrap-visible {
 background-color:rgba(0,0,0,.3); 
@@ -11740,7 +11740,7 @@ background-color:rgba(0,0,0,.3);
     /* 이벤트가 발생할 때 띄우기 위해 숨김
     //처음부터 보이게 하는 상황이라면 display:flex; */
     padding:15px; 
-  	z-index: 3;
+  	z-index: 10;
     /* 반응형의 경우 padding이 없으면 박스가 화면에 붙어서 안이뻐짐 */}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
