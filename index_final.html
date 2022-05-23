@@ -110,30 +110,13 @@
 
                 var content = '<div class="bubble" onclick="showinfo()" id="bubble"><span class="content">3</span></div>';
                 
-                var customOverlay1 = new kakao.maps.CustomOverlay({
-                        position: positions[0].latlng,
-                        content: content,
-                        xAnchor: 0.5,
-                        yAnchor: 1.8
+                for (var i=0; i<positions.length; i++){
+                    var customOverlay = new kakao.maps.CustomOverlay({
+                        position: positions[i].latlng,
+                        content : content
                     });
-            
-                
-                var customOverlay2 = new kakao.maps.CustomOverlay({
-                        position: positions[1].latlng,
-                        content: content,
-                        xAnchor: 0.5,
-                        yAnchor: 1.8
-                    });
-                
-                var customOverlay3 = new kakao.maps.CustomOverlay({
-                        position: positions[2].latlng,
-                        content: content,
-                        xAnchor: 0.5,
-                        yAnchor: 1.8
-                    });
-                customOverlay1.setMap(map);
-                customOverlay2.setMap(map);
-                customOverlay3.setMap(map);
+                    customOverlay.setMap(map);
+                }
 
             </script>
 
