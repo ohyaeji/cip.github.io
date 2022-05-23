@@ -11,6 +11,18 @@ const showMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 showMenu('navbar', 'nav-close')
 
+const showInfo = (infoId, toggleId) => {
+    const info = document.getElementById(infoId),
+          toggle = document.getElementById(toggleId)
+
+    if (toggle && info) {
+        toggle.addEventListener('click', () => {
+            info.classList.toggle('display_visible');
+        })
+    }
+}
+showInfo('info', 'bubble')
+showInfo('info', 'info-toggle')
 // const showpopup = (btnId, popupId) => {
 //     const btn = document.getElementById(btnId),
 //           popup = document.getElementById(popupId)
