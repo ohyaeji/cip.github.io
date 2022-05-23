@@ -17,7 +17,13 @@
 }
 
 .display_visible {
-    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display:flex;
+    z-index: 4;
+    background-color: #fff;
 }
 
 
@@ -343,13 +349,7 @@ a {
   }
 
 .info {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    display:none;
-    z-index: 4;
-    background-color: #fff;
+    display: none;
 }
 
 .d-infobar {
