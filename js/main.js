@@ -19,8 +19,11 @@ function showinfo(){
 
 function showpopup(){
     const popup = document.getElementById('popup');
+    const search = document.getElementById('search');
     popup.classList.toggle('popup-wrap-visible');
     popup.classList.toggle('popup-wrap');
+    search.classList.toggle('search_box_invisible');
+
 }
 
 
