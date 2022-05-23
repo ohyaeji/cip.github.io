@@ -382,6 +382,7 @@ a {
     z-index: 4;
     background-color: #fff;
     text-align: left;
+    overflow: scroll;
 }
 
 .d-infobar {
@@ -389,7 +390,7 @@ a {
 }
 
 .info_wrap {
-    overflow: scroll;
+    
 }
 .info_header{
     border-bottom: 1px solid gray;
