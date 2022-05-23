@@ -32,9 +32,9 @@
 
 .menu_display {
     margin: 0 auto;
-  z-index: 3;
+    z-index: 3;
     position: absolute;
-  top: 3%;
+    top: 3%;
     left: 20%;
     width : 50%;
     background-color : #fff;
