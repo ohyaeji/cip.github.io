@@ -11,32 +11,17 @@ const showMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 showMenu('navbar', 'nav-close')
 
-// const showInfo = (infoId, toggleId) => {
-//     const info = document.getElementById(infoId),
-//           toggle = document.getElementById(toggleId)
+function showinfo(){
+    const info = document.getElementById('info');
+    info.classList.toggle('display_visible');
+    info.classList.toggle('info');
+}
 
-//     if (toggle && info) {
-//         toggle.addEventListener('click', () => {
-//             info.classList.toggle('display_visible');
-//             alert("마커입니다");
-//         })
-//     }
-// }
-// showInfo('info', 'bubble')
-// showInfo('info', 'info-toggle')
-// const showpopup = (btnId, popupId) => {
-//     const btn = document.getElementById(btnId),
-//           popup = document.getElementById(popupId)
-//     if ( btn && popup ) {
-//         btn.addEventListener('click', ()=>{
-//             alert("팝업입니다.");
-//             popup.classList.toggle('display_invisible');
-            
-//         })
-//     }
-// }
-
-// showpopup('popup_btn', 'popup-wrap')
+function showpopup(){
+    const popup = document.getElementById('popup');
+    popup.classList.toggle('popup-wrap-visible');
+    popup.classList.toggle('popup-wrap');
+}
 
 
 /* LINK ACTIVE */
