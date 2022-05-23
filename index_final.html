@@ -254,14 +254,9 @@
     <script src="js/main.js"></script>
     <script>
         function showinfo(){
-            alert("마커입니다55");
-            // const info = document.querySelector('.info');
-            // info.classList.toggle('display_visible');
-            if($("#info").css('display')=='none'){
-                $("#info").css('display', 'flex');
-            } else {
-                $("#info").css('display', 'none');
-            }
+            // alert("마커입니다55");
+            const info = document.getElementById('info').style.display;
+            alert(info);
         }
 
         
