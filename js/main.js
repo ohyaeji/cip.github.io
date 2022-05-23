@@ -18,6 +18,7 @@ const showInfo = (infoId, toggleId) => {
     if (toggle && info) {
         toggle.addEventListener('click', () => {
             info.classList.toggle('display_visible');
+            alert("마커입니다");
         })
     }
 }
