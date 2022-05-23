@@ -394,7 +394,6 @@ a {
     display:none;
     z-index: 4;
     background-color: #fff;
-    text-align: left;
     overflow: scroll;
 }
   
@@ -406,7 +405,6 @@ a {
     display:flex;
     z-index: 4;
     background-color: #fff;
-    text-align: left;
     overflow: scroll;
 }
 
