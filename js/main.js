@@ -8,23 +8,22 @@ const showMenu = (navbarId, toggleId) => {
         })
     }
 }
-const closeMenu = (navbarId, toggleId) => {
-    const navbar = document.getElementById(navbarId),
-          toggle = document.getElementById(toggleId)
-    if( toggle && navbar ) {
-        toggle.addEventListener('click', ()=>{
-            navbar.classList.toggle('expander');
-        })
-    }
-}
 showMenu('navbar', 'nav-toggle')
-closeMenu('navbar', 'nav-close')
+showMenu('navbar', 'nav-close')
 
-function popup_open() {
-    $("#popup_btn").click(function(){
-        $("#popup").toggle();
-    });
-}
+// const showpopup = (btnId, popupId) => {
+//     const btn = document.getElementById(btnId),
+//           popup = document.getElementById(popupId)
+//     if ( btn && popup ) {
+//         btn.addEventListener('click', ()=>{
+//             alert("팝업입니다.");
+//             popup.classList.toggle('display_invisible');
+            
+//         })
+//     }
+// }
+
+// showpopup('popup_btn', 'popup-wrap')
 
 
 /* LINK ACTIVE */
