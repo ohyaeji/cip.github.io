@@ -171,7 +171,6 @@
                         // 정상적으로 검색이 완료됐으면
                         // 검색 목록과 마커를 표출합니다
                         displayPlaces(data);
-                        alert("장소검색을 완료했습니다.")
 
                         // 페이지 번호를 표출합니다
                         displayPagination(pagination);
@@ -213,14 +212,12 @@
                             //  displayInfowindow(marker, title);
                             //});
                             kakao.maps.event.addListener(marker, 'click', function() {
-                                alert("눌렸습니다!");
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
                                 showpopup();                                                               
                             });
                             itemEl.onclick =  function () {
-                                alert("눌렸습니다!");
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
