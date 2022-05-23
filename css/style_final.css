@@ -43,12 +43,12 @@
   	align-items: center;
 }
 
-.search_box {
-	width: 70%;
+.menu_display{
+    display: none;
 }
 
-.search_box_invisible {
-    display: none;
+.search_box {
+	width: 70%;
 }
 
 .search_btn {
