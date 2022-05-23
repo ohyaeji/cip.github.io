@@ -20,30 +20,13 @@ const closeMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 closeMenu('navbar', 'nav-close')
 
-// function showinfo(){
-//     $("#bubble").click(function(){
-//         $("#info").toggle();
-//         alert("마커입니다.");
-//     })
-// }
+function popup_open() {
+    $("#popup_btn").click(function(){
+        $("#popup").toggle();
+    });
+}
 
-// function closeinfo(){
-//     $("#info-toggle").click(function(){
-//         $("#info").toggle();
-//         alert("버튼입니다");
-//     })
-// }
 
-// const closebtn = (infobtn, infoId) => {
-//     const infobtn = document.getElementById(infobtn),
-//           info = document.getElementById(infoId)
-//     if (infobtn && info){
-//         info.addEventListener('click', () => {
-//             info.classList.toggle();
-//         })
-//     }
-// } 
-// closebtn('info_btn', 'info')
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
 function colorLink() {
