@@ -89,7 +89,7 @@
                     <div class="popup-body">
                         <div class="body-content">
                             <form onsubmit="searchPlaces(); return false;">
-                                키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                                키워드 : <input type="text" placeholder="검색어를 입력하세요" id="keyword" size="15"> 
                                 <button type="submit">검색하기</button> 
                             </form>
                         </div>
@@ -158,10 +158,6 @@
 
                     var keyword = document.getElementById('keyword').value;
 
-                    if (!keyword.replace(/^\s+|\s+$/g, '')) {
-                        alert('키워드를 입력해주세요!');
-                        return false;
-                    }
 
                     // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
                     ps.keywordSearch( keyword, placesSearchCB); 
@@ -177,16 +173,6 @@
 
                         // 페이지 번호를 표출합니다
                         displayPagination(pagination);
-
-                    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-
-                        alert('검색 결과가 존재하지 않습니다.');
-                        return;
-
-                    } else if (status === kakao.maps.services.Status.ERROR) {
-
-                        alert('검색 결과 중 오류가 발생했습니다.');
-                        return;
 
                     }
                 }
