@@ -43,6 +43,20 @@
   	align-items: center;
 }
 
+.menu_visible {
+    margin: 0 auto;
+  z-index: 3;
+    position: absolute;
+  top: 3%;
+    left: 20%;
+    width : 50%;
+    background-color : #fff;
+    border-radius: 3px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
 .search_box {
 	width: 70%;
 }
@@ -11720,7 +11734,7 @@ textarea.form-control-lg {
     left:0;
     right:0;
     bottom:0;               /*모든 방향에 0을 주면 화면에 꽉차게 됩니다.*/
-    display:flex;
+    display:none;
     /* 이벤트가 발생할 때 띄우기 위해 숨김
     //처음부터 보이게 하는 상황이라면 display:flex; */
     padding:15px; 
@@ -11741,7 +11755,7 @@ textarea.form-control-lg {
     left:0;
     right:0;
     bottom:0;               /*모든 방향에 0을 주면 화면에 꽉차게 됩니다.*/
-    display:none;
+    display:flex;
     /* 이벤트가 발생할 때 띄우기 위해 숨김
     //처음부터 보이게 하는 상황이라면 display:flex; */
     padding:15px; 
