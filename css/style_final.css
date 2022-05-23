@@ -16,6 +16,11 @@
     z-index: 1;
 }
 
+.display_visible {
+    display: flex;
+}
+
+
 .menu {
   	margin: 0 auto;
     z-index: 3;
@@ -255,6 +260,11 @@ a {
     transition: .5s;
 }
 
+  .container{
+  	width:80%;
+    height:80%
+  }  
+  
 .popup-wrap{
     background-color:rgba(0,0,0,.3); 
     /* 배경색과 투명도로 살짝 어둡지만 투명한 배경
@@ -266,11 +276,11 @@ a {
     left:0;
     right:0;
     bottom:0;               /*모든 방향에 0을 주면 화면에 꽉차게 됩니다.*/
-    display:flex; 
+    display:none;
     /* 이벤트가 발생할 때 띄우기 위해 숨김
     //처음부터 보이게 하는 상황이라면 display:flex; */
     padding:15px; 
-    z-index: 5;
+  	z-index: 3;
     /* 반응형의 경우 padding이 없으면 박스가 화면에 붙어서 안이뻐짐 */
   }
 
@@ -290,6 +300,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+      color:#fff;
   }
 
   .popup-body {
@@ -331,7 +342,7 @@ a {
       border-right: 1px solid #3b5fbf;
   }
 
-#info {
+.info {
     position: fixed;
     bottom: 0;
     width: 100%;
