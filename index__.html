@@ -84,7 +84,6 @@
                     <div class="popup-head">	
                         <ion-icon name="close-outline" class="nav__close" id="nav-close" onclick="showpopup()"></ion-icon>
                     </div>
-                    <div>
                     <div class="popup-body">
                         <div class="body-content">
                             <form onsubmit="searchPlaces(); return false;">
@@ -145,10 +144,7 @@
                 }
 
                 // 장소 검색 객체를 생성합니다
-                var ps = new kakao.maps.services.Places();  
-
-                // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
-                var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+                var ps = new kakao.maps.services.Places(); 
 
                 // 키워드로 장소를 검색합니다
                 searchPlaces();
@@ -170,6 +166,7 @@
                         // 정상적으로 검색이 완료됐으면
                         // 검색 목록과 마커를 표출합니다
                         displayPlaces(data);
+                        alert("장소검색을 완료했습니다.")
 
                         // 페이지 번호를 표출합니다
                         displayPagination(pagination);
