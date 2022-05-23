@@ -20,9 +20,9 @@ function showinfo(){
 function showpopup(){
     const popup = document.getElementById('popup');
     const menu = document.getElementById('menu');
-    popup.classList.toggle('popup-wrap-visible');
-    popup.classList.toggle('popup-wrap');
-    menu.classList.toggle('menu_display');
+    popup.classList.toggle('menu-wrap-visible');
+    popup.classList.toggle('menu_wrap');
+    menu.classList.toggle('menu');
 
 }
 
