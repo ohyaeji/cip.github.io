@@ -18,10 +18,10 @@ function showinfo(){
 }
 
 function showpopup(){
-    const popup = document.getElementById('popup');
+    const popup = document.getElementById('menu_wrap');
     const search = document.getElementById('search');
-    popup.classList.toggle('popup-wrap-visible');
-    popup.classList.toggle('popup-wrap');
+    popup.classList.toggle('menu-wrap-visible');
+    popup.classList.toggle('menu_wrap');
     search.classList.toggle('search_box_invisible');
 
 }
