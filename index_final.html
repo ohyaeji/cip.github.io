@@ -14,8 +14,8 @@
         <div class="menu" id="menu">
             <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
             <div class="search_box">
-                <input type="text" onclick="popup_open()" class="search_btn" maxlength="225" id="modal-open"  placeholder="장소를 검색하세요.">
-                <button id="popup_btn" onclick="popup_open()">click</button>
+                <input type="text" class="search_btn" maxlength="225" id="modal-open"  placeholder="장소를 검색하세요.">
+                <button class="popup_btn">click</button>
                 <i id="keyboard"></i>
             </div>
         </div>
@@ -153,10 +153,10 @@
                 </div>
                 </div>
             </div>
-            <div id="info">
+            <div id="info" class="info">
                 <div class="d-infobar" id="infobar">
                     <div class="info_header">
-                        <ion-icon name="close-outline" class="info__toggle" id="infobtn" onclick="closeinfo()"></ion-icon>
+                        <ion-icon name="close-outline" class="info__toggle" id="infobtn" onclick="showinfo()"></ion-icon>
                         <h3 class="p_name">가천대학교 AI 공학관</h3>
                     </div>
                     <div class="info_wrap">
@@ -254,18 +254,11 @@
     <script src="js/main.js"></script>
     <script>
         function showinfo(){
-            $("#bubble").click(function(){
-                $("#info").toggle();
-                alert("마커입니다.");
-            })
+            const info = document.querySelector('.info');
+            info.classList.toggle('display_visible')
         }
 
-        function closeinfo(){
-            $("#infobtn").click(function(){
-                $("#info").toggle();
-                alert("버튼입니다.");
-            })
-        }
+        
     </script>
 
 </body>
