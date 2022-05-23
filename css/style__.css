@@ -331,6 +331,7 @@ a {
   .popup {
       width: 100%; /*반응형이기 때문에 가로값은 100%*/
       max-width: 400px;
+      height: 60%;
       border-radius: 10px;
       overflow: hidden; /*각을 없앴을 때 내부 영역이 튀어나오는 걸 방지*/
       background-color: var(--bg-color);
