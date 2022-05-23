@@ -18,12 +18,12 @@ function showinfo(){
 }
 
 function showpopup(){
-    const popup = document.getElementById('popup');
-    const menu = document.getElementById('menu');
-    popup.classList.toggle('menu-wrap-visible');
-    popup.classList.toggle('menu_wrap');
-    menu.classList.toggle('menu');
-
+    const menu_wrap = document.getElementById('menu_wrap');
+    const search = document.getElementById('menu');
+    menu_wrap.classList.toggle('menu_wrap');
+    menu_wrap.classList.toggle('menu-wrap-visible');
+    search.classList.toggle('menu');
+    search.classList.toggle('menu_visible');
 }
 
 
