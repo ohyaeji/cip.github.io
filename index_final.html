@@ -256,7 +256,12 @@
         function showinfo(){
             alert("마커입니다66");
             const info = document.getElementById('info');
-            info.classList.toggle('display_visible');
+            const visible = info.style.display;
+            if (visible == 'none') {
+                visible = 'flex';
+            } else {
+                visible = 'none';
+            }
         }
 
         
