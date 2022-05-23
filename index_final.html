@@ -83,13 +83,13 @@
             <div id="menu_wrap" class="menu_wrap">
                 <div class="popup">
                     <div class="popup-head">	
-                                    <span class="head-title">장소 검색</span>
-                                </div>
+                        <ion-icon name="close-outline" class="nav__close" id="nav-close" onclick="showpopup()"></ion-icon>
+                    </div>
                     <div>
                     <div class="popup-body">
                         <div class="body-content">
                             <form onsubmit="searchPlaces(); return false;">
-                                <input type="text" placeholder="검색어를 입력하세요" id="keyword" size="15"> 
+                                장소 : <input type="text" placeholder="위치 검색" id="keyword" size="15"> 
                                 <button type="submit">검색하기</button> 
                             </form>
                         </div>
