@@ -525,17 +525,6 @@ address {
   line-height: inherit;
 }
 
-ol,
-ul {
-  padding-left: 2rem;
-}
-
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
 
 ol ol,
 ul ul,
@@ -4284,13 +4273,13 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
 }
 
-.nav {
+/* .nav {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-}
+} */
 
 .nav-link {
   display: block;
