@@ -59,7 +59,7 @@
 .menu {
     margin: 0 auto;
     z-index: 3;
-    position: absolute;
+    position: fixed;
     top: 3%;
     left: 5%;
     width: fit-content;
