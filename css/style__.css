@@ -244,7 +244,7 @@ a {
     padding: var(--nav--padding);
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px){ 
+@media screen and (min-width: 769px) and (max-width: 828px){ 
     .expander {
         width: 60%;
     }
@@ -11602,7 +11602,7 @@ textarea.form-control-lg {
     .bg_white {background:#fff;}
     #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
     #menu_wrap .body-content{text-align: center;}
-    #placesList li {list-style: none; background-color:#fff;}
+    #placesList li {list-style: none; background-color:#fff; color: #000;}
     #placesList .item {position:relative;border-bottom:1px solid #888;overflow: scroll;cursor: pointer;min-height: 65px;}
     #placesList .item span {display: block;}
     #placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;}
