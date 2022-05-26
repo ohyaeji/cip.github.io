@@ -13,61 +13,34 @@
         <div class="menu" id="menu">
             <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
             <div class="search_box" id="search">
-                <input type="text" class="search_btn" maxlength="225" id="modal-open" onclick="showpopup();"  placeholder="장소를 검색하세요.">
+                <input type="text" class="search_btn" maxlength="225" id="modal-open"  placeholder="장소를 검색하세요.">
                 <i id="keyboard"></i>
             </div>
         </div>
 
-        <div class="l-navbar" id="navbar">
-            <nav class="nav">
+        <div class="l-navbar expander" id="navbar">
+    
+            <nav class="nav"> 
                 <div>
-                    <div class="nav__brand" onclick="location.href=index.html">
-                        <!-- <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon> -->
-                        <a href="#" class="nav__logo">CIP</a>
-                        <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
-                    </div>
-                    <div class="nav__list">
-                        <!-- 홈화면 -->
-                        <a href="#" class="nav__link active" onclick="location.reload();">
-                            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">Home</span>
-                        </a>
-                        <!-- 마이페이지 (로그인 안되어 있으면 로그인 페이지로) -->
-                        <div href="#" class="nav__link collapse" onclick="location.href=mypage.html">
-                            <ion-icon name="person-circle-outline"></ion-icon>
-                            <span class="nav_name">My Page</span>
+                    <div class="map_wrap">
+                        <div id="menu_wrap" class="menu_wrap">
+                            <div class="popup">
+                                <div class="popup-body">
+                                    <div class="body-content">
+                                        <form onsubmit="searchPlaces(); return false;">
+                                            장소 : <input type="text" placeholder="위치 검색" id="keyword" size="15"> 
+                                            <button type="submit">검색하기</button> 
+                                        </form>
+                                    </div>
+                                    <hr>
+                                    <ul id="placesList"></ul>
+                                </div>
+                                <div class="popup-foot">
+                                    <div id="pagination"></div>
+                                </div>
+                            </div>
+                            <hr>    
                         </div>
-    
-                        <!-- 설정페이지 -->
-                        <a href="#" class="nav__link" onclick="location.href=settings.html">
-                            <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">Settings</span>
-                        </a>
-    
-                        <!-- 커뮤니티 -->
-                        <a href="#" class="nav__link" onclick="location.href=settings.html">
-                            <ion-icon name="clipboard-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">Community</span>
-                        </a>
-    
-                        <!-- 공지사항 -->
-                        <a href="#" class="nav__link" onclick="location.href=settings.html">
-                            <ion-icon name="volume-high-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">Announcement</span>
-                        </a>
-    
-                        <!-- 이용안내 -->
-                        <a href="#" class="nav__link" onclick="location.href=settings.html">
-                            <ion-icon name="information-circle-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">How to use</span>
-                        </a>
-    
-                        <!-- 문의하기 -->
-                        <a href="#" class="nav__link" onclick="location.href=settings.html">
-                            <ion-icon name="help-outline" class="nav__icon"></ion-icon>
-                            <span class="nav_name">Q&A</span>
-                        </a>
-    
                     </div>
                     <a href="#" class="nav__link">
                         <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
@@ -98,7 +71,37 @@
                     </div>
                 </div>
                 <hr>    
-            </div>
+            </div><div class="l-navbar expander" id="navbar">
+    
+            <nav class="nav"> 
+                <div>
+                    <div class="map_wrap">
+                        <div id="menu_wrap" class="menu_wrap">
+                            <div class="popup">
+                                <div class="popup-body">
+                                    <div class="body-content">
+                                        <form onsubmit="searchPlaces(); return false;">
+                                            장소 : <input type="text" placeholder="위치 검색" id="keyword" size="15"> 
+                                            <button type="submit">검색하기</button> 
+                                        </form>
+                                    </div>
+                                    <hr>
+                                    <ul id="placesList"></ul>
+                                </div>
+                                <div class="popup-foot">
+                                    <div id="pagination"></div>
+                                </div>
+                            </div>
+                            <hr>    
+                        </div>
+                    </div>
+                    <a href="#" class="nav__link">
+                        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Log out</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
         </div>
 
             <div id="map" class="map" style="width:100%;height:100%;"></div>
@@ -400,7 +403,7 @@
                                     Comment form
                                     <div class="community_wrap">
                                         <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-                                        <button onclick="" id="register" class="register" name="register">등록</button>
+                                        <button onclick="" id="register" class="register">등록</button>
                                     </div>
                                     <div class="comment_wrap">
                                         <!-- Comment with nested comments -->
