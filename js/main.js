@@ -17,14 +17,17 @@ function showinfo(){
     info.classList.toggle('info');
 }
 
-function showpopup(){
-    const menu_wrap = document.getElementById('menu_wrap');
-    const search = document.getElementById('menu');
-    menu_wrap.classList.toggle('menu_wrap');
-    menu_wrap.classList.toggle('menu-wrap-visible');
-    search.classList.toggle('menu');
-    search.classList.toggle('menu_visible');
+const showpopup_new = (searchId) => {
+    const search = document.getElementById(searchId);
+    if (search){
+        search.addEventListener('click', ()=>{
+            showpopup_new();
+            removeMarker();
+            removeAllChildNods(listEl);
+        })
+    }
 }
+showpopup_new('modal-open')
 
 function zero(){
     var keyword = document.getElementById('keyword').value;
