@@ -10,6 +10,7 @@ const showMenu = (navbarId, toggleId) => {
 }
 showMenu('navbar', 'nav-toggle')
 showMenu('navbar', 'nav-close')
+showMenu('navbar', 'itemEl')
 
 function showMenu_popup(){
     const navbar = document.getElementById('navbar');
