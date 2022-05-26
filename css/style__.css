@@ -234,7 +234,7 @@ a {
 
 /* Expander menu */
 .expander {
-    width: 35%;
+    width: 60%;
     padding: var(--nav--padding);
 }
 
