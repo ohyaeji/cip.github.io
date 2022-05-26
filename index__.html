@@ -21,32 +21,30 @@
         <div class="l-navbar expander" id="navbar">
     
             <nav class="nav"> 
-                <div>
-                    <div class="map_wrap">
-                        <div id="menu_wrap" class="menu_wrap">
-                            <div class="popup">
-                                <div class="popup-body">
-                                    <div class="body-content">
-                                        <form onsubmit="searchPlaces(); return false;">
-                                            장소 : <input type="text" placeholder="위치 검색" id="keyword" size="15"> 
-                                            <button type="submit">검색하기</button> 
-                                        </form>
-                                    </div>
-                                    <hr>
-                                    <ul id="placesList"></ul>
+                <div class="map_wrap">
+                    <div id="menu_wrap" class="menu_wrap">
+                        <div class="popup">
+                            <div class="popup-body">
+                                <div class="body-content">
+                                    <form onsubmit="searchPlaces(); return false;">
+                                        장소 : <input type="text" placeholder="위치 검색" id="keyword" size="15"> 
+                                        <button type="submit">검색하기</button> 
+                                    </form>
                                 </div>
-                                <div class="popup-foot">
-                                    <div id="pagination"></div>
-                                </div>
+                                <hr>
+                                <ul id="placesList"></ul>
                             </div>
-                            <hr>    
+                            <div class="popup-foot">
+                                <div id="pagination"></div>
+                            </div>
                         </div>
+                        <hr>    
                     </div>
-                    <a href="#" class="nav__link">
-                        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Log out</span>
-                    </a>
                 </div>
+                <a href="#" class="nav__link">
+                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">Log out</span>
+                </a>
             </nav>
         </div>
 
@@ -166,7 +164,7 @@
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
-                                showpopup();
+                                showMenu_popup();
                                 removeAllChildNods(listEl);
                                 $('keyword').val('');
                             });
@@ -174,22 +172,13 @@
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
-                                showpopup();
+                                showMenu_popup();
                                 removeAllChildNods(listEl);
                                 $('keyword').val('');
                             };
                         })(marker, places[i].phone);
 
                         fragment.appendChild(itemEl);
-                    }
-
-                    function showpopup(){
-                        const menu_wrap = document.getElementById('menu_wrap');
-                        const search = document.getElementById('menu');
-                        menu_wrap.classList.toggle('menu_wrap');
-                        menu_wrap.classList.toggle('menu-wrap-visible');
-                        search.classList.toggle('menu');
-                        search.classList.toggle('menu_visible');
                     }
                     
                     // 검색결과 항목들을 검색결과 목록 Element에 추가합니다
