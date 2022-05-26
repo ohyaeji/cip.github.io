@@ -164,17 +164,17 @@
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
-                                showMenu_popup();
                                 removeAllChildNods(listEl);
                                 $('keyword').val('');
+                                showMenu_popup();
                             });
                             itemEl.onclick =  function () {
                                 const point = marker.getPosition();
                                 map.setCenter(point);
                                 marker.setMap(map);
-                                showMenu_popup();
                                 removeAllChildNods(listEl);
                                 $('keyword').val('');
+                                showMenu_popup();
                             };
                         })(marker, places[i].phone);
 
