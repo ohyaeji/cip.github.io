@@ -330,6 +330,27 @@
                     el.removeChild (el.lastChild);
                 }
             }
+			
+            // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+            if (navigator.geolocation) {
+
+                // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+                navigator.geolocation.getCurrentPosition(function(position) {
+
+                    var lat = position.coords.latitude, // 위도
+                        lon = position.coords.longitude; // 경도
+
+                    var locPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+                       
+                    map.setCenter(locPosition);
+
+                  });
+
+            } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+
+                var locPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+                   map.setCenter(locPosition);
+            }
 
 
             </script>
@@ -436,6 +457,59 @@
 
     <!-- JS -->
     <script src="js/main.js"></script>
+<script>
+/* EXPANDER MENU */
+const showMenu = (navbarId, toggleId) => {
+    const navbar = document.getElementById(navbarId),
+          toggle = document.getElementById(toggleId)
+    if( toggle && navbar ) {
+        toggle.addEventListener('click', ()=>{
+            navbar.classList.toggle('expander');
+        })
+    }
+}
+showMenu('navbar', 'nav-toggle')
+showMenu('navbar', 'nav-close')
+
+function showinfo(){
+    const info = document.getElementById('info');
+    info.classList.toggle('info_visible');
+    info.classList.toggle('info');
+}
+
+function showpopup(){
+    const menu_wrap = document.getElementById('menu_wrap');
+    const search = document.getElementById('menu');
+    menu_wrap.classList.toggle('menu_wrap');
+    menu_wrap.classList.toggle('menu-wrap-visible');
+    search.classList.toggle('menu');
+    search.classList.toggle('menu_visible');
+}
+
+
+/* LINK ACTIVE */
+const linkColor = document.querySelectorAll('.nav__link')
+function colorLink() {
+    linkColor.forEach(l=> l.classList.remove('active'))
+    this.classList.add('active')
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+/* COLLAPSE MENU */
+const linkCollapse = document.getElementsByClassName('collapse__link')
+var i
+
+for(i=0;i<linkCollapse.length;i++) {
+    linkCollapse[i].addEventListener('click', function(){
+        const collapseMenu = this.nextElementSibling
+        collapseMenu.classList.toggle('showCollapse')
+
+        const rotate = collapseMenu.previousElementSibling
+        rotate.classList.toggle('rotate')
+    });
+}
+
+</script>
 
 </body>
 
