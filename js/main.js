@@ -20,12 +20,13 @@ function showinfo(){
 function showpopup(){
     const menu_wrap = document.getElementById('menu_wrap');
     const search = document.getElementById('menu');
+    const input = document.getElementById('search_btn');
     menu_wrap.classList.toggle('menu_wrap');
     menu_wrap.classList.toggle('menu-wrap-visible');
     search.classList.toggle('menu');
     search.classList.toggle('menu_visible');
+    input.value = "";
 }
-
 
 /* LINK ACTIVE */
 const linkColor = document.querySelectorAll('.nav__link')
