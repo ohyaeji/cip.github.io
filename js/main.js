@@ -11,6 +11,11 @@ const showMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 showMenu('navbar', 'nav-close')
 
+function showMenu_popup(){
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('expander');
+}
+
 function showinfo(){
     const info = document.getElementById('info');
     info.classList.toggle('info_visible');
