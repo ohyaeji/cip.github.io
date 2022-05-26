@@ -74,7 +74,13 @@
     /* margin: 0 auto; */
 }
 
+.community_wrap {
+    display: flex;
+}
 
+.register {
+    
+}
 
 .search_box {
 	width: 70%;
