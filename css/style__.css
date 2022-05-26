@@ -244,6 +244,11 @@ a {
     padding: var(--nav--padding);
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px){ 
+    .expander {
+        width: 60%;
+    }
+}
 
 
 /* Add padding body*/
