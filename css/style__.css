@@ -346,6 +346,11 @@ a {
     overflow: scroll;
 }
 
+.date{
+    font-size: small;
+    color: #8a8a8a;
+}
+
 /* @charset "UTF-8"; */
 /*!
 * Start Bootstrap - Blog Post v5.0.8 (https://startbootstrap.com/template/blog-post)
