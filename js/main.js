@@ -13,7 +13,7 @@ showMenu('navbar', 'nav-close')
 
 function showMenu_popup(){
     const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('expander');
+    navbar.classList.toggle('expander')
 }
 
 function showinfo(){
