@@ -79,7 +79,7 @@
 }
 
 .register {
-    
+    height: 86px;
 }
 
 .search_box {
@@ -7665,6 +7665,7 @@ textarea.form-control-lg {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+  width: 90%;
 }
 
 .mb-5 {
