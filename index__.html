@@ -170,8 +170,8 @@
                         displayPagination(pagination);
 
                     }
-                    else{
-                        alert("검색을 할 수 없습니다.");
+                    else if (status === kakao.maps.services.Status.ERROR){
+                        alert("Error");
                     }
                 }
 
