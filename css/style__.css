@@ -234,13 +234,13 @@ a {
 
 /* Expander menu */
 .expander {
-    width: 40%;
+    width: 60%;
     padding: var(--nav--padding);
 }
 
-@media screen and (min-width: 769px) and (max-width: 828px){ 
+@media screen and (max-width: 769px) { 
     .expander {
-        width: 60%;
+        width: 40%;
     }
 }
 
