@@ -333,47 +333,20 @@
                             <div class="card bg-light">
                                 <div class="card-body">
                                     <div class="community_wrap">
-                                        <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-                                        <button onclick="" id="register" class="register">등록</button>
+                                        <form class="mb-4"><textarea class="form-control" id="comment" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
+                                        <button onclick="register()" id="register" class="register" >등록</button>
                                     </div>
                                     <div class="comment_wrap">
                                         <!-- Comment with nested comments -->
-                                        <div class="d-flex mb-4">
-                                            <!-- Parent comment -->
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">익명1</div>
-                                                지금 주차장 공사중이어서 사용할 수가 없어요
-                                                <p class="date" name="date">2022.05.25 14:23</p>
-                                                <!-- Child comment 1 -->
-                                                <div class="d-flex mt-4">
-                                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                                    <div class="ms-3">
-                                                        <div class="fw-bold">익명2</div>
-                                                        오!! 가려고 했는데 좋은 정보 감사합니다~~
-                                                        <p class="date" name="date">2022.05.25 14:30</p>
-                                                    </div>
-                                                </div>
-                                                <!-- Child comment 2 -->
-                                                <div class="d-flex mt-4">
-                                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                                    <div class="ms-3">
-                                                        <div class="fw-bold">익명3</div>
-                                                        지금은 공사 다 끝나서 사용 가능해요!!!!
-                                                        <p class="date" name="date">2022.05.27 09:02</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single comment -->
                                         <div class="d-flex">
                                             <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                                             <div class="ms-3">
-                                                <div class="fw-bold">익명5</div>
+                                                <div class="fw-bold">익명1</div>
                                                 이 주차장은 다 좋은데 주차 자리가 너무 좁아서 항상 주차하기가 너무 힘들어요..ㅠㅠㅠ
                                                 <p class="date" name="date">2022.05.26 21:06</p>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -392,6 +365,33 @@
     <!-- JS -->
     <script src="js/main.js"></script>
 <script>
+var comment = [];
+var comment_index = 0;
+const formatDate = (current_datetime)=>{
+        let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds();
+        return formatted_date;
+    }
+
+function register(){
+    const string = document.getElementById('comment').value;
+    var date = new Date();
+    var div = document.createElement('div');
+    var Str = '<div class="d-flex">'+
+                    '<div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>' +
+                        '<div class="ms-3">' +
+                            '<div class="fw-bold">익명' +(comment_index+1) + '</div>' + string +
+                            '<p class="date">'+formatDate(date) +'</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+    div.innerHTML = Str;
+    div.className = 'comment_wrap';
+    comment += div;
+    for (var i = 0; i < comment.length; i++) {
+
+    }
+}
+
 /* EXPANDER MENU */
 const showMenu = (navbarId, toggleId) => {
     const navbar = document.getElementById(navbarId),
