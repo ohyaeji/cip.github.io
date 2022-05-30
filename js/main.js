@@ -11,6 +11,7 @@ const showMenu = (navbarId, toggleId) => {
 showMenu('navbar', 'nav-toggle')
 showMenu('navbar', 'nav-close')
 showMenu('navbar', 'itemEl')
+showMenu('navbar', 'nav-toggle_2')
 
 function showMenu_popup(){
     const navbar = document.getElementById('navbar');
