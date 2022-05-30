@@ -232,17 +232,32 @@ a {
     background-color: var(--first-color);
 }
 
-/* Expander menu */
-.expander {
-    width: 60%;
+/* PC */
+@media all  and (max-width:1024px) {
+  /* Expander menu */
+  .expander {
+    width: 40%;
     padding: var(--nav--padding);
+  }
 }
 
-/* @media screen and (max-width: 769px) { 
-    .expander {
-        width: 40%;
-    }
-} */
+/* 태블릿 세로 */
+@media all and (min-width:768px) and (max-width:1023px) {
+  /* Expander menu */
+  .expander {
+    width: 60%;
+    padding: var(--nav--padding);
+  }
+}
+
+/* 모바일 가로, 태블릿 세로 */
+@media all and (max-width:767px) {
+  /* Expander menu */
+  .expander {
+    width: 80%;
+    padding: var(--nav--padding);
+  }
+}
 
 
 /* Add padding body*/
