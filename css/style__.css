@@ -238,11 +238,11 @@ a {
     padding: var(--nav--padding);
 }
 
-@media screen and (max-width: 769px) { 
+/* @media screen and (max-width: 769px) { 
     .expander {
         width: 40%;
     }
-}
+} */
 
 
 /* Add padding body*/
