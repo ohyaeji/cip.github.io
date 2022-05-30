@@ -233,7 +233,7 @@ a {
 }
 
 /* PC */
-@media all  and (max-width:1024px) {
+@media all and (min-width:1024px) {
   /* Expander menu */
   .expander {
     width: 40%;
